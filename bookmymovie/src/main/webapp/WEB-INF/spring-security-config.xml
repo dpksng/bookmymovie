@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" 
+	 xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+<beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+    <beans:property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+    <beans:property name="url" value="jdbc:mysql://localhost:3306/bookmymovie"/>
+    <beans:property name="username" value="root"/>
+    <beans:property name="password" value="password"/>   
+</beans:bean>
+	
+	<http auto-config="true">
+		<intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
+		<form-login login-page="/admin-login" authentication-failure-url="/logFail" login-processing-url="/performLogin" default-target-url="/admin" always-use-default-target="true" username-parameter="email" password-parameter="password"/>
+		<csrf disabled="true"/>
+		<logout invalidate-session="true" logout-success-url="/admin" logout-url="/logout" />
+	</http>
+	
+	<!-- Select users and user_roles from database -->
+	<authentication-manager>
+	  <authentication-provider>
+		<jdbc-user-service data-source-ref="dataSource"
+		  users-by-username-query=
+		    "select ADMIN_ID,ADMIN_PWD,enabled from admin_info where ADMIN_ID=?"
+		  authorities-by-username-query=
+		    "select logger_email,role from logger_roles where logger_email=?" />
+	  </authentication-provider>
+	</authentication-manager>
+
+</beans:beans>

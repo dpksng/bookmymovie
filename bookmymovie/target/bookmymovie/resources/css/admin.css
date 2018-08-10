@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+body,html{
+	font-family:'Lato', sans-serif;
+	min-height:100%;
+	background-color:#f0f0f0;
+	margin:0;
+	padding:0;
+}
+
+body a{
+	text-decoration:none;
+	color:#000000;
+}
+
+
+body a:hover{
+	text-decoration:none;
+	color:#000000;
+}
+
+.admin-dashboard{
+	margin-top:20px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:20px;
+	padding:0;
+}
+
+.admin-box{
+	padding:0;
+}
+
+.profile-box{
+	padding-top:46.5px;
+	background-color:#FFFFFF;
+	width:100%;
+	border:1.5px solid #eaeaea;
+	margin-bottom:20px;
+	padding-bottom:20px;
+}
+
+.profile-img{
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+	padding-left:50px;
+	padding-right:50px;
+}
+
+.name{
+	margin-top:10px;
+	text-align:center;
+}
+
+.time{
+	margin-top:20px;
+	text-align:center;
+	margin-bottom:21.2px;
+}
+
+@media only screen and (min-width: 768px) {
+	
+    .time h1{
+		font-size:58px;
+	}
+}
+
+
+.option-box{
+	margin-bottom:20px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#FFFFFF;
+	min-height:201.8px;
+	width:100%;
+	border:1.5px solid #eaeaea;
+	padding:10px;
+	text-align:center;
+}
+
+.option-box h5{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.option-box-img{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:25px;
+	width:90px;
+	height:90px;
+}
+
+.admin-reg{
+	background-color:#FFFFFF;
+	border:1.5px solid #eaeaea;
+	padding:50px;
+}
+
+.admin-rg{
+	padding-left:100px;
+	padding-right:100px;
+}
+
+.admin-reg h3{
+	text-align:center;
+}
+
+.admin-menu{
+	background-color:#FFFFFF;
+	width:100%;
+	margin-bottom:20px;
+}
+
+.admin-menu ul{
+	list-style:none;
+	border-top:1.5px solid #eaeaea;
+	border-left:1.5px solid #eaeaea;
+	border-right:1.5px solid #eaeaea;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+
+.admin-menu li{
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:20px;
+	border-bottom:1.5px solid #eaeaea;
+	width:100%;
+	padding-right:20px;
+}
+
+.admin-menu li:hover{
+	background-color:#b8b8b8;
+	border-bottom:2px solid #eaeaea;
+}
+
+.border-box{
+	width:100%;
+	text-align:center;
+	padding:10px;
+	margin-bottom:39px;
+}
+
+.label{
+	height:50px;
+}
+
+.logout-img{
+	margin-top:20px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:35px;
+	width:70px;
+	height:70px;
+}
