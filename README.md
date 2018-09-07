@@ -7,17 +7,18 @@ Technologies used
 
 Backend
 --------------------------
-Java 
-Spring MVC
-Hibernate
-JSP
-JSTL
-Servlet Sessions
-Spring Security
+Java,
+Spring MVC,
+Hibernate,
+JSP,
+JSTL,
+Sessions,
+Spring Security,
 
 Front End
 --------------------------
-HTML
-CSS
+HTML,
+CSS,
+bootstrap
 
 This is more than enough for final year project
