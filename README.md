@@ -1,5 +1,5 @@
 # bookmymovie
-Movie Ticket Booking Web Application Maven project based on Java, Spring MVC, Hibernate and Spring security
+Movie Ticket Booking is Web Application Maven project based on Java, Spring MVC, Hibernate and Spring security
 
 This is a java based web application.
 
